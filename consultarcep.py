@@ -1,6 +1,9 @@
+from tkinter import Button, mainloop
+from winsound import PlaySound
 import PySimpleGUI as sg
 import requests as req
 import time
+from playsound import playsound
 
 #Interface da classe e ligação com viacep
 class Interface:
@@ -21,14 +24,17 @@ class Interface:
 
 #Criação do layout do app em pysimplegui    
     def __init__(self):
+        sg.theme('Black')
+        playsound('fundo.mp3', block=False)
         app_layout = [
-            [sg.Text("Código Postal: "), sg.Input(key=("input"), size=(10))],
+            [sg.Text("Código Postal: "), sg.Input(key=("input"), size=(12))],
             [sg.Button("Submit")],
             [sg.Output(size=(50,10))],
+            [sg.Button('Sair', size=(15,1))]
         ]
-
-        self.janela = sg.Window("Rastreador de Código Postal").layout(app_layout)
-    
+#Nome do aplicativo
+        self.janela = sg.Window("Rastreador de Código Postal By Murilo Heyde").layout(app_layout)
+#Iniciando procura
     def Iniciar(self):
         while True:
             self.button, self.values = self.janela.Read()
@@ -37,6 +43,12 @@ class Interface:
             self.__Search()
             if event == 1:
                 break
+#Criação botão sair
+    def botão_sair(self, Sair):
+        self.botao_sair = Button(self.janela, text= 'Sair', command=self.janela.quit)
+        self.botao.pack()
+        slef.botao_sair.pack()
+        mainloop()
 
 
 app = Interface()

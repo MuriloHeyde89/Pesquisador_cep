@@ -11,7 +11,7 @@ Criação de uma aplicação de consulta de CEP através da VIACEP
 
 [x] Realizar busca por parametros adicionados
 
-[] Criar layout do app através do PySimpleGui
+[] Criar layout do app através do PySimpleGui (escolher tema)
 
 [] Demonstrar dados buscados
 
