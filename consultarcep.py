@@ -24,11 +24,11 @@ class Interface:
 
 #Criação do layout do app em pysimplegui    
     def __init__(self):
-        sg.theme('Black')
-        playsound('fundo.mp3', block=False)
+        sg.theme('LightBlue2')
+        playsound('dropsound.mp3', block=False)
         app_layout = [
-            [sg.Text("Código Postal: "), sg.Input(key=("input"), size=(12))],
-            [sg.Button("Submit")],
+            [sg.Text("Código Postal: (insira o seu código postal ao lado)"), sg.Input(key=("input"), size=(12))],
+            [sg.Button("Procurar")],
             [sg.Output(size=(50,10))],
             [sg.Button('Sair', size=(15,1))]
         ]
