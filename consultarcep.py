@@ -27,7 +27,7 @@ class Interface:
         sg.theme('LightBlue1')
         playsound('dropsound.mp3', block=False)
         app_layout = [
-            [sg.Text("Código Postal: (insira o seu código)"), sg.Input(key=("input"), size=(12))],
+            [sg.Text("Código Postal: (insira o seu código)"), sg.Input(key=("input"), size=(15))],
             [sg.Button("Procurar")],
             [sg.Output(size=(50,10))],
             [sg.Button('Sair', size=(15,1))]
